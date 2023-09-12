@@ -1,10 +1,14 @@
-class InstagramResult {
-    constructor() {
-        this.fullName;
-        this.biography;
-        this.postsCount;
-        this.followersCount;
-        this.followingsCount;
-        this.private;
-    }
+module.exports = class InstagramResult {
+    id;
+    observeeId;
+    dateCreated;
+    username;
+    fullName;
+    biography;
+    private;
+    profilePicUrl;
+    profilePicturePhotoId;
+    postsCount;
+    followersCount;
+    followingsCount;
 }

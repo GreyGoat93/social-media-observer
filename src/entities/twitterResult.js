@@ -1,16 +1,22 @@
-class TwitterResult {
-    constructor() {
-        this.name;
-        this.description;
-        this.location;
-        this.followersCount;
-        this.followingsCount;
-        this.statussesCount;
-        this.mediasCount;
-        this.favoritesCount;
-        this.protected;
-        this.birthdayDay;
-        this.birthdayMonth;
-        this.birthdayYear;
-    }
+module.exports = class TwitterResult {
+    id;
+    observeeId;
+    dateCreated;
+    username;
+    name;
+    description;
+    profilePictureUrl;
+    bannerPictureUrl;
+    profilePicturePhotoId;
+    bannerPictureUrlId;
+    location;
+    followersCount;
+    followingsCount;
+    statussesCount;
+    mediasCount;
+    favoritesCount;
+    protected;
+    birthdayDay;
+    birthdayMonth;
+    birthdayYear;
 }
