@@ -1,7 +1,13 @@
+const EnvValues = require("../constants/envValues");
+
 module.exports = class NotificationService {
+    constructor() {
+        this.env = new EnvValues();
+    }
+
     sendNotification(deviceToken, title, message) {
         const fcmUrl = 'https://fcm.googleapis.com/fcm/send';
-        const legacyServerKey = 'AAAATTwNU0I:APA91bE_xBCnpG8S9EftCSdraigcsyNcfo2Fb2Jx1YFFqOfAUeq-0o_k0ylmaMpHdYFPxgQ1B2lYMHEr9soZmtJUOkEq4eRxYS1LXjvXJaWV86A4tOD_XuIDmPYAh4m9bjSVLDjNlfEh';
+        const legacyServerKey = this.env.FIREBASE_NOTIFICATION_AUTH_KEY;
         
         const notificationPayload = {
             to: deviceToken,
